@@ -1,0 +1,10 @@
+{
+  "target_url": "https://service.example/task",
+  "requested_task": "Describe the exact business action",
+  "state": "AUTH_REQUIRED",
+  "user_action_needed": "Complete login on the page",
+  "page_visible_after_return": false,
+  "original_task_verified": false,
+  "evidence": null,
+  "blocker": null
+}

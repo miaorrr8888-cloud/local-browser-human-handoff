@@ -1,15 +1,17 @@
 ---
 name: local-browser-human-handoff
-description: Hand a browser login or CAPTCHA step to the user when automation cannot continue.
+description: 在浏览器任务被登录、扫码或验证码阻塞时组织人工交接，并在用户返回后核验原任务。
 license: MIT
 ---
 
-# Browser handoff
+# 浏览器人工交接
 
-Use the available browser tool to open the exact requested page and verify it is visible.
-Ask the user to complete login, MFA or CAPTCHA. Never read or export credentials or browser profiles.
-After handoff, inspect the page again before claiming the workflow can continue.
-An authenticated browser session does not prove another automation session is authenticated.
-If the tool still cannot access results, request the relevant page content or a user-provided link.
-Historical renderer crashes are environment-specific observations, not a ban on a browser or tool.
-Do not disable sandbox, proxy or security settings as a workaround.
+先确认具体目标页面、原任务与当前阻塞。只请求用户完成当前所需的登录、MFA 或 CAPTCHA，不索要密码、Cookie、令牌或浏览器档案。
+
+使用 examples/handoff.md 的交接表达与 templates/HANDOFF_STATUS.json 记录状态。用户返回后先确认目标页面能否访问，再验证原任务结果。页面加载、登录成功与业务动作完成分别记录。
+
+同一账号在另一会话登录，不证明当前工具会话也已登录。仍受限时保留 BLOCKED 和具体原因，只请求必要的页面信息或用户提供的链接，不绕过访问限制或降低浏览器安全设置。
+
+## 上手示例与当前限制
+
+先读 [README.md](README.md) 的快速开始、输入输出和未完成项；可运行例子在 examples/，本次修订见 CHANGELOG.md。不要把合成演示或离线检查当成真实平台验证。

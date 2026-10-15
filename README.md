@@ -1,16 +1,43 @@
-# local-browser-human-handoff
+# 浏览器人工验证交接
 
-This is a guidance-only skill; there is no executable browser integration.
-Use the browser tools provided by the host, verify the page, and let the user complete authentication.
-Historical local renderer failures are not portable facts.
+`local-browser-human-handoff` · 独立技能仓库 · MIT
 
-Published by miaorrr8888-cloud with AI-assisted development and cleanup. See PROVENANCE.md and LICENSE.
-Validation: run `python -m unittest discover -s tests -v` from this repository root.
+适合：使用浏览器助手、但需要本人扫码/登录/验证的用户
 
-## 独立仓库
+## 解决什么问题
 
-本仓库只包含 local-browser-human-handoff 一个技能。
-源码目录、SKILL.md、许可和相关测试均可独立取得，不依赖其他技能仓库。
-工作记录与其他技能入口：[agent-skills-worklog](https://github.com/miaorrr8888-cloud/agent-skills-worklog)。
+把 AI 可做的准备与本人必须做的验证分清，登录回来后继续验证原任务，而不是把“登录成功”当作业务完成。
 
-这是说明型技能，没有可执行程序，因此不声称有程序单元测试。
+## 快速开始
+
+没有脚本依赖；需要宿主提供可用的浏览器操作能力。
+
+阅读 [SKILL.md](SKILL.md)，再按 [交接示例](examples/handoff.md) 和 [状态模板](templates/HANDOFF_STATUS.json) 执行。
+
+## 输入与输出
+
+**输入**：目标页面、要完成的具体任务、当前遇到的登录/验证阻塞。不要提供密码、Cookie、令牌或浏览器档案。
+
+**输出**：明确的人工动作、返回后的页面检查、原任务是否完成的证据，以及必要时的 BLOCKED 状态。
+
+## 本次完善
+
+原有缺口：缺可以照着使用的交接话术、返回检查和阻塞记录模板。
+
+已补：补交接请求、状态模板和完整演示，说明浏览器不同会话的限制与返回后的验证顺序。
+
+## 仍然缺什么
+
+纯流程型技能，不自动登录、不解决 CAPTCHA、不修复所有浏览器环境；实际页面仍需人工验证，没有程序单元测试。
+
+## 验证与使用注意
+
+这是流程型技能，没有可执行程序或程序单元测试。使用示例用于交接演练，不证明任何真实网站的认证已成功。
+
+示例数据和图片均为合成演示，不是真实客户、交易、销量或模型成绩。不要提交真实凭据和私有输入。
+
+## 来源与工作记录
+
+由 miaorrr8888-cloud 在 AI 辅助下积累和维护，来源与边界见 [PROVENANCE.md](PROVENANCE.md)，许可见 [LICENSE](LICENSE)。
+
+[全部独立技能与阶段性工作记录](https://github.com/miaorrr8888-cloud/agent-skills-worklog)
