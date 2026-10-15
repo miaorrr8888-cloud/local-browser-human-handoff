@@ -1,5 +1,7 @@
 # 浏览器人工验证交接
 
+[新手逐步使用指南](USER_GUIDE.md) · [用途与适用人群介绍](INTRODUCTION.md)
+
 `local-browser-human-handoff` · 独立技能仓库 · MIT
 
 适合：使用浏览器助手、但需要本人扫码/登录/验证的用户
