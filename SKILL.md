@@ -2,7 +2,7 @@
 name: local-browser-human-handoff
 description: 遇到登录、验证码或权限限制时整理交接信息，核对恢复条件和完成证据，不代替人工认证。
 license: MIT
-version: "1.1.0"
+version: 1.1.1
 display_name: "浏览器人工接管"
 agent_created: true
 
