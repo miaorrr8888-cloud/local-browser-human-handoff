@@ -1,9 +1,12 @@
 ---
 name: local-browser-human-handoff
-description: 在浏览器任务被登录、扫码或验证码阻塞时组织人工交接，并在用户返回后核验原任务。
+description: 遇到登录、验证码或权限限制时整理交接信息，核对恢复条件和完成证据，不代替人工认证。
 license: MIT
----
+version: "1.1.0"
+display_name: "浏览器人工接管"
+agent_created: true
 
+---
 # 浏览器人工交接
 
 先确认具体目标页面、原任务与当前阻塞。只请求用户完成当前所需的登录、MFA 或 CAPTCHA，不索要密码、Cookie、令牌或浏览器档案。
