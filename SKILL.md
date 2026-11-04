@@ -1,5 +1,8 @@
 ---
 name: local-browser-human-handoff
+slug: zhengrong-local-browser-human-handoff
+displayName: "浏览器人工接管"
+summary: "遇到登录、验证码或权限限制时整理交接信息，核对恢复条件与完成证据，不代替人工认证。"
 description: 遇到登录、验证码或权限限制时整理交接信息，核对恢复条件和完成证据，不代替人工认证。
 license: MIT
 version: 1.1.1
